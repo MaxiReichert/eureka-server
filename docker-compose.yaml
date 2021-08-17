@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  eurekaService:
+    container_name: eureka-service
+    image: eureka-service:0.0.1-SNAPSHOT
+    ports:
+      - "8761:8761"
+    networks:
+      - network_tp
+
+networks:
+  network_tp:
+    driver: bridge
